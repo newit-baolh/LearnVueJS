@@ -6,9 +6,9 @@ const app = Vue.createApp({
             url:'https://google.com.vn',
             showBooks: true,
             books : [
-                {title: 'Henry the sea', name: 'Lalala', img: 'assets/1.jpg'},
-                {title: 'By the way', name: 'Orig', img: 'assets/2.jpg'},
-                {title: 'Obanan yuton', name: 'Penata', img: 'assets/3.jpg'},
+                {title: 'Henry the sea', name: 'Lalala', img: 'assets/1.jpg', isFav: true},
+                {title: 'By the way', name: 'Orig', img: 'assets/1.jpg', isFav: false},
+                {title: 'Obanan yuton', name: 'Penata', img: 'assets/1.jpg', isFav: true},
             ]
         }
     },

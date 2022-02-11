@@ -7,6 +7,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learn Vue</title>
     <script src="https://unpkg.com/vue@3"></script>
+    <style>
+        body{
+            background: #eee;
+            max-width: 960px;
+            margin: 20px auto;
+        }
+        p,h3,ul{
+            padding: 0;
+            margin: 0;
+        }
+        li{
+            list-style-type: none;
+            background: #fff;
+            margin: 20px auto;
+            padding: 10px 20px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        li.fav{
+            background: #ff9ed2;
+            color: white;
+        }
+    </style>
 </head>
 
 <body>
@@ -15,7 +40,7 @@
         <!-- <a v-bind:href="url">website</a> -->
         <div v-if="showBooks">
             <ul>
-                <li v-for="book in books">
+                <li v-for="book in books" :class="{fav: book.isFav}">
                     <img :src="book.img" :alt="book.title">
                     <h3>{{book.title}}</h3>
                     <p>{{book.name}}</p> 
