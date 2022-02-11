@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,13 +8,27 @@
     <title>Learn Vue</title>
     <script src="https://unpkg.com/vue@3"></script>
 </head>
+
 <body>
     <div id="app">
-        <p>{{title}} - {{name}} - {{date}} - {{age}}</p>
-        <button v-on:click="age++">Increase age</button>
-        <button v-on:click="age--">Decrease age</button>
-        <div @click="changeTitle('Orange')">Change book title</div>
+        <div v-if="showBooks">
+            <p>{{title}} - {{name}} - {{date}} - {{age}}</p>
+        </div>
+        <button @click="toggleBooks">
+            <!-- Method 1 -->
+            <!-- <span>
+                {{!showBooks ? 'Show' : 'Hide' }} Books
+            </span> -->
+            <!-- Method 2 -->
+            <!-- <span v-if="showBooks">Hide Books</span>
+            <span v-if="!showBooks">Show Books</span> -->
+            <!-- Method 3 -->
+            <span v-if="showBooks">Hide Books</span>
+            <span v-else>Show Books</span>
+        </button>
+        <div v-show="showBooks">Currently is showing books</div>
     </div>
     <script src="app.js"></script>
 </body>
+
 </html>
