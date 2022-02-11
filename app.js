@@ -5,7 +5,14 @@ const app = Vue.createApp({
         return {
             title: 'The final Empire',
             name: 'Book',
-            date: '11/2/2022'
+            date: '11/2/2022',
+            age: 10
+        }
+    },
+    methods: {
+        changeTitle(title){
+            // this.title = ' The story of Mine'
+            this.title = title
         }
     },
 })
