@@ -8,6 +8,8 @@ const app = Vue.createApp({
             name: 'Book',
             date: '11/2/2022',
             age: 10,
+            x : 0,
+            y : 0
         }
     },
     methods: {
@@ -17,6 +19,18 @@ const app = Vue.createApp({
         },
         toggleBooks(){
             this.showBooks = !this.showBooks
+        },
+        handleEvent(e,data){
+            // console.log('event');
+            console.log(e, e.type);
+            if(data){
+                console.log(data);
+            }
+        },
+        handleMousemove(e){
+            // console.log(e);
+            this.x = e.offsetX
+            this.y = e.offsetY
         }
     },
 })
