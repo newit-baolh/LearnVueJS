@@ -1,6 +1,6 @@
 <template>
   <h1>{{ title }}</h1>
-  <Modal/>
+  <Modal :header="header" :text="text" theme="sale"/>
   <input type="text" ref="name">
   <button @click="handleClick">Click me</button>
 </template>
@@ -14,6 +14,8 @@ export default {
   data() {
     return {
       title: 'Hello this is my Vue App 🙄:)',
+      header: "Singup for Gateway",
+      text: "Grab data from root"
     }
   },
   methods: {
