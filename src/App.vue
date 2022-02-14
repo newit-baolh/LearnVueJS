@@ -11,12 +11,21 @@
       <p>Learn</p>
     </Modal>
   </div>
+
+  <div v-if="showModalTwo">
+    <Modal @close="toggleModalTwo">
+      <h1>Signup to page</h1>
+      <p>Updated</p>
+    </Modal>
+  </div>
   <button @click="toggleModal">open modal</button>
-  <input type="text" ref="name">
-  <button @click="handleClick">Click me</button>
+  <button @click="toggleModalTwo">open modal 2</button>
 </template>
 
 <script>
+// - creat an extra button to open a diff modal
+// - use the same modal component but pass in a diff template (slot)
+// - use a diff methed (e.g. toggleModalTwo) and data (e.g. showModalTwo)
 import Modal from './components/Modal.vue'
 
 export default {
@@ -25,19 +34,16 @@ export default {
   data() {
     return {
       title: 'Hello this is my Vue App 🙄:)',
-      header: "Singup for Gateway",
-      text: "Grab data from root",
       showModal: false,
+      showModalTwo: false
     }
   },
   methods: {
-    handleClick(){
-      console.log(this.$refs.name);
-      this.$refs.name.classList.add('active');
-      this.$refs.name.focus();
-    },
     toggleModal (){
       this.showModal = !this.showModal
+    },
+    toggleModalTwo (){
+      this.showModalTwo = !this.showModalTwo
     }
   }
 }
