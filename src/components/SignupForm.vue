@@ -5,10 +5,17 @@
 
       <label>Password</label>
       <input type="password" required placeholder="Please input your password" v-model="password">
+
+      <label>Role:</label>
+      <select v-model="role" >
+          <option value="develop">Web Develop</option>
+          <option value="internet">Internet</option>
+      </select>
       
   </form>
   <p>Email: {{email}}</p>
   <p>Password: {{password}}</p>
+  <p>Role: {{role}}</p>
 </template>
 
 <script>
@@ -16,7 +23,8 @@ export default {
     data(){
         return {
             email: '',
-            password: ''
+            password: '',
+            role: 'develop'
         }
     }
 }
@@ -40,7 +48,7 @@ export default {
         letter-spacing: 1px;
         font-weight: bold;
     }
-    input{
+    input,select{
         display: block;
         padding: 10px 6px;
         width: 100%;
