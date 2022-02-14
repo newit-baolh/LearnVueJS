@@ -1,6 +1,10 @@
 <template>
   <h1>{{ title }}</h1>
-  <Modal :header="header" :text="text" theme="sale"/>
+  <p>Welcome</p>
+  <div v-if="showModal">
+    <Modal :header="header" :text="text" theme="sale" @close="toggleModal"/>
+  </div>
+  <button @click="toggleModal">open modal</button>
   <input type="text" ref="name">
   <button @click="handleClick">Click me</button>
 </template>
@@ -15,7 +19,8 @@ export default {
     return {
       title: 'Hello this is my Vue App 🙄:)',
       header: "Singup for Gateway",
-      text: "Grab data from root"
+      text: "Grab data from root",
+      showModal: false,
     }
   },
   methods: {
@@ -23,6 +28,9 @@ export default {
       console.log(this.$refs.name);
       this.$refs.name.classList.add('active');
       this.$refs.name.focus();
+    },
+    toggleModal (){
+      this.showModal = !this.showModal
     }
   }
 }
