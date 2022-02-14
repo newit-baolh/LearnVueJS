@@ -11,11 +11,17 @@
           <option value="develop">Web Develop</option>
           <option value="internet">Internet</option>
       </select>
+
+      <div class="term">
+          <input type="checkbox" required v-model="terms">
+          <label>ACCEPT TERMS AND CONDITIONS</label>
+      </div>
       
   </form>
   <p>Email: {{email}}</p>
   <p>Password: {{password}}</p>
   <p>Role: {{role}}</p>
+  <p>Terms accept: {{terms}}</p>
 </template>
 
 <script>
@@ -24,7 +30,8 @@ export default {
         return {
             email: '',
             password: '',
-            role: 'develop'
+            role: 'develop',
+            terms: false,
         }
     }
 }
@@ -56,5 +63,12 @@ export default {
         border: none;
         border-bottom: 1px solid #ddd;
         color: #555;
+    }
+    input[type="checkbox"]{
+        display: inline-block;
+        width: 16px;
+        margin: 0 10px 0 0;
+        position: relative;
+        top: 2px;
     }
 </style>
