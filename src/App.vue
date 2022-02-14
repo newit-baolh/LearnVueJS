@@ -2,15 +2,22 @@
   <h1>Reaction Timer</h1>
   <button class="btn-play" @click="start" :disabled="isPlaying">Play</button>
   <Block v-if="isPlaying" :delay="delay" @end="endGame"/>
-  <p v-if="showResult">Reaction time: {{score}} ms</p>
+  <Result v-if="showResult" :score="score" />
 </template>
 
 <script>
+// challenge
+// - when the game ends, show the results component
+// - output the score inside the results component
+
 import Block from './components/Block.vue'
+import Result from './components/Result.vue'
+
 export default {
   name: 'App',
   components: {
-    Block
+    Block,
+    Result
   },
   data() {
     return {
