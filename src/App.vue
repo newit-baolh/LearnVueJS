@@ -52,9 +52,11 @@ export default {
   margin-top: 60px;
 }
 .btn-play{
-  padding: 10px;
+  padding: 8px 16px;
   border: none;
   background: rgb(218, 238, 206);
+  font-size: 16px;
+  letter-spacing: 1px;
   
 }
 .btn-play:hover{
@@ -66,5 +68,6 @@ export default {
 .btn-play:disabled{
   border: none;
   background: rgb(218, 238, 206);
+  cursor: not-allowed;
 }
 </style>
