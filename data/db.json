@@ -1,0 +1,7 @@
+{
+    "jobs":[
+        {"title": "Json server is 1", "id": 1, "details":"Laaa"},
+        {"title": "Rengar best friend", "id": 2, "details":"Muta"},
+        {"title": "Pun nit open char", "id": 3, "details":"Shira"}
+    ]
+}
