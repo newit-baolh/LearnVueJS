@@ -3,6 +3,8 @@
     Home
     <p ref="p">My name is {{name}} and age {{age}}</p>
     <button @click="handleClick">Click me</button>
+    <button @click="age++">Add 1 age</button>
+    <input type="text" name="" id="" v-model="name">
   </div>
 </template>
 
@@ -15,10 +17,12 @@ export default {
 
     const p =ref(null)
 
-    let name = 'mario'
-    let age = 30
+    const name = ref('mario')
+    const age = ref(30)
+
     const handleClick = ()=>{
-      console.log(p);
+      name.value = 'bao'
+      age.value = 40
     }
 
     return {
@@ -27,7 +31,7 @@ export default {
   },
   data(){
     return {
-      age: 40,
+      score: 40,
     }
   }
 }
