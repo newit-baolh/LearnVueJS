@@ -1,38 +1,24 @@
 <template>
   <div class="home">
     <h1>Home</h1>
-    <h2>Refs</h2>
-    <p>{{blog.name}} - {{blog.age}}</p>
-    <button @click="updateAge">Update</button>
-    <h2>Reactive</h2>
-    <p>{{lemon.name}} - {{lemon.age}} - {{nameOne}}</p>
-    <button @click="updateLemon">Update Lemon</button>
+    <input type="text" v-model="search">
+    <p>search term - {{search}}</p>
+    <div v-for="name in matchingNames" :key="name">{{name}}</div>
   </div>
 </template>
 
 <script>
-import { reactive, ref } from '@vue/reactivity';
+import { computed, ref } from '@vue/runtime-core';
 export default {
   name: 'Home',
   setup(){
-    const blog =ref({name: 'Meo', age: 10})
-    const lemon = reactive({ name: 'lemon', age: 1})
+    const search = ref('')
+    const names = ref(['ni','bo','oi'])
 
-    const nameOne = reactive('nameOne')
-
-    const updateAge = ()=>{
-      blog.value.age = 12
-    }
-
-     const updateLemon = ()=>{
-      lemon.age = 2
-      nameOne = reactive('pop')
-    }
-
-
-    return {
-      blog, updateAge, lemon, updateLemon, nameOne
-    }
+    const matchingNames = computed(()=>{
+      return names.value.filter((name)=> name.includes(search.value))
+    })
+    return {names, search, matchingNames}
   }
 }
 </script>
