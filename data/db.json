@@ -1,0 +1,20 @@
+{
+    "posts":[
+        {
+            "id": 1,
+            "title": "welcome to new blog",
+            "body": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. At tempora eos voluptate maxime a laborum atque commodi debitis cum explicabo voluptas consectetur, quis aut ad neque illo sit pariatur dicta maiores. Porro obcaecati totam unde quidem nesciunt quisquam laboriosam, voluptates et, laudantium molestiae, fuga animi adipisci atque! Corporis voluptate dolore minus animi cumque recusandae, minima atque, rem illo non mollitia iusto fugit in consequuntur, soluta quasi eius at? Velit, cupiditate minima? Numquam, dolorem earum! Dignissimos neque cupiditate ducimus expedita tempora! Accusantium amet mollitia sit doloremque vel, libero architecto quas! Non praesentium accusantium optio quidem id ducimus. Saepe tempore ad molestiae.",
+            "tag": [
+                "dev", "design"
+            ]
+        },
+        {
+            "id": 2,
+            "title": "top 5 css",
+            "body": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. At tempora eos voluptate maxime a laborum atque commodi debitis cum explicabo voluptas consectetur, quis aut ad neque illo sit pariatur dicta maiores. Porro obcaecati totam unde quidem nesciunt quisquam laboriosam, voluptates et, laudantium molestiae, fuga animi adipisci atque! Corporis voluptate dolore minus animi cumque recusandae, minima atque, rem illo non mollitia iusto fugit in consequuntur, soluta quasi eius at? Velit, cupiditate minima? Numquam, dolorem earum! Dignissimos neque cupiditate ducimus expedita tempora! Accusantium amet mollitia sit doloremque vel, libero architecto quas! Non praesentium accusantium optio quidem id ducimus. Saepe tempore ad molestiae.",
+            "tag": [
+                "dev", "css"
+            ]
+        }
+    ]
+}
